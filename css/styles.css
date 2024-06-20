@@ -1,59 +1,53 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    height: 100%;
+    overflow: auto;  /* Allow scrolling */
+}
+
+html {
+    height: 100%;
+}
+
+.container {
+    max-width: 800px; /* Constrain text to central area */
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100%; /* Ensure the container takes full height */
+    overflow: auto;   /* Ensure it can scroll */
+    padding-bottom: 20px; /* Avoid content being cut off at the bottom */
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 1em 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile {
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-header p {
-    margin: 0;
-    font-size: 1.2em;
-}
-
-#profile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2em 1em;
-    background: #fff;
-}
-
-#profile img {
+.profile-image {
+    width: 225px;  /* 1.5 times the original width */
+    height: auto;  /* Maintain aspect ratio */
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-right: 2em;
 }
 
-section {
-    padding: 2em 1em;
+.research-interests, .latest-news {
+    margin-bottom: 20px;
 }
 
-section h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 0.5em;
+h1, h2 {
+    color: #333;
 }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
 }
