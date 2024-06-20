@@ -1,23 +1,15 @@
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    height: 100%;
-    overflow: auto;  /* Allow scrolling */
-}
-
-html {
-    height: 100%;
 }
 
 .container {
     max-width: 800px; /* Constrain text to central area */
     margin: 0 auto;
     padding: 20px;
-    min-height: 100%; /* Ensure the container takes full height */
-    overflow: auto;   /* Ensure it can scroll */
-    padding-bottom: 20px; /* Avoid content being cut off at the bottom */
 }
 
 header {
@@ -25,17 +17,15 @@ header {
     margin-bottom: 20px;
 }
 
-.profile {
-    text-align: center;
-}
-
 .profile-image {
-    width: 225px;  /* 1.5 times the original width */
-    height: auto;  /* Maintain aspect ratio */
+    width: 225px;  /* Increased image size */
+    height: auto;
     border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
 }
 
-.research-interests, .latest-news {
+section {
     margin-bottom: 20px;
 }
 
@@ -50,4 +40,29 @@ ul {
 
 ul li {
     margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Ensure scrolling works properly */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    flex-shrink: 0;
 }
